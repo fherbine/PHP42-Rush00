@@ -1,0 +1,71 @@
+Database Schema : Sérialisé.
+
+Table Utilisateur :
+
+[
+	user_name1 => [
+      'login_name_html' => user_name1,
+      'passwd_name_html' => md5(user_pass),
+      'admin' => TRUE/FALSE
+  ],
+  user_name2 => [
+      'login_name_html' => user_name1,
+      'passwd_name_html' => md5(user_pass),
+      'admin' => TRUE/FALSE
+  ],
+]
+
+
+Table Commandes :
+  "Une entre par commande, il peux y avoir plusieur fois la meme valeur"
+[
+  0 => [
+    "user_name1" => [
+        id_article1,
+        id_article2,
+        id_article3
+    ]
+  ],
+  1 => [
+    "user_name2" => [
+        id_article1,
+        id_article2,
+        id_article3
+    ]
+  ],
+  2 => [
+    "user_name1" => [
+        id_article1,
+        id_article2,
+        id_article3
+    ]
+  ],
+]
+
+
+Table Article :
+[
+  id_article1 => [
+    "title" => "content",
+    "img" => "content_url",
+    "desc" => "content",
+    "price" => "prix",
+  ],
+  .
+  .
+  .
+]
+
+Bonus :
+  "Utilisation de la fonction rand pour générer un indice aléatoire"
+
+Table capchat
+
+[
+  0 => [
+    "md5(url_img)" => "traduction",
+  ],
+  1 => [
+    "md5(url_img)" => "traduction",
+  ]
+]
