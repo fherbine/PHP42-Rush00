@@ -4,40 +4,42 @@ Table Utilisateur :
 
 [
 	user_name1 => [
-      'login_name_html' => user_name1,
-      'passwd_name_html' => md5(user_pass),
+      'login' => user_name1,
+      'username' => 1st name & 2nd
+      'passwd' => whirlpool(user_pass),
       'admin' => TRUE/FALSE
   ],
   user_name2 => [
-      'login_name_html' => user_name1,
-      'passwd_name_html' => md5(user_pass),
+      'login' => user_name1,
+      'username' => 1st name & 2nd
+      'passwd' => whirlpool(user_pass),
       'admin' => TRUE/FALSE
   ],
 ]
 
 
-Table Commandes :
+Table Commandes : 
   "Une entre par commande, il peux y avoir plusieur fois la meme valeur"
 [
   0 => [
     "user_name1" => [
-        id_article1,
-        id_article2,
-        id_article3
+        art_content,
+        art_content,
+        art_content,
     ]
   ],
   1 => [
     "user_name2" => [
-        id_article1,
-        id_article2,
-        id_article3
+        art_content,
+        art_content,
+        art_content,
     ]
   ],
   2 => [
     "user_name1" => [
-        id_article1,
-        id_article2,
-        id_article3
+        art_content,
+        art_content,
+        art_content,
     ]
   ],
 ]
@@ -45,11 +47,10 @@ Table Commandes :
 
 Table Article :
 [
-  id_article1 => [
-    "title" => "content",
-    "img" => "content_url",
-    "desc" => "content",
-    "price" => "prix",
+  "art_cont" => [
+    "art_img" => "content_url",
+    "art_desc" => (base64)"content",
+    "art_cost" => "prix",
   ],
   .
   .
