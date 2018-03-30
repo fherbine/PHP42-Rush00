@@ -5,13 +5,13 @@ Table Utilisateur :
 [
 	user_name1 => [
       'login' => user_name1,
-      'username' => 1st name & 2nd
+      'realname' => 1st name & 2nd
       'passwd' => whirlpool(user_pass),
       'admin' => TRUE/FALSE
   ],
   user_name2 => [
       'login' => user_name1,
-      'username' => 1st name & 2nd
+      'realname' => 1st name & 2nd
       'passwd' => whirlpool(user_pass),
       'admin' => TRUE/FALSE
   ],
