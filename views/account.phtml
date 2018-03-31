@@ -1,5 +1,4 @@
 <?php
-	include("get_articles.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +10,7 @@
 </head>
 	<body>
 		<header>
+			+
 			<div id="left_header">
 				<h1>Amazonne</h1>
 			</div>
@@ -25,7 +25,13 @@
 		</header>
 		<div id="main_page">
 			<section>
-				<?php echo $board; ?>
+				<?php if (@$_SESSION['logged_on_admin']) : ?>
+					<artcle></article>					
+
+				<?php else if () : ?>
+					<?php echo $valeur; ?>
+					@include_once("user_page.html");
+				<?php endif ?>
 			</section>
 			<footer>
 				<hr />
