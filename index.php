@@ -15,7 +15,12 @@
 			<div id="left_header">
 				<h1>Amazonne</h1>
 			</div>
-			<!-- Menu -->
+			<div class="main_menu">
+				<ul>
+					<a href="index.php"><li>INDEX</li></a>
+					<li>CART</li>
+				</ul>
+			</div>
 			<div id="right_header">
 				<ul>
 					<div id="sign_in_div">
