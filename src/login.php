@@ -1,6 +1,7 @@
 <?php
 
 include ('auth.php');
+include ('const.php')
 include ('modele/render.php');
 
 function check_login()
@@ -25,11 +26,9 @@ function login()
 {
     session_start();
     if (check_login() === TRUE)
-    {
-      echo "OK\n";
-    }
+      redirect(ROOT . DS . 'index.php', 302);
     else
-      echo "ERROR\n";
+      redirect(ROOT . DS . 'index.php', 302);
 }
 
 login();
