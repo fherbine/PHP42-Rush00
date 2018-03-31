@@ -21,7 +21,7 @@
 					<div id="sign_in_div">
 						<li>SIGN IN</li>
 						<div id="sign_in_form">
-						<form method="post" action="#"> <!-- src.php ? => connexion -->
+						<form method="post" action="src/login.php"> <!-- src.php ? => connexion -->
 							<input type="text" name="login" class="sign_input" placeholder="Login" /><br />
 							<input type="password" name="passwd" class="sign_input" placeholder="password" /><br />
 							<input type="submit" name="submit" class="sign_submit" value="OK"/>
@@ -31,7 +31,7 @@
 					<div id="sign_up_div">
 						<li>SIGN UP</li>
 						<div id="sign_up_form">
-						<form method="post" action="#"> <!--- src.php ? Inscription -->
+						<form method="post" action="src/create.php"> <!--- src.php ? Inscription -->
 							<input type="text" name="login" class="sign_input" placeholder="Login" /><br />
 							<input type="text" name="realname" class="sign_input" placeholder="Name" /><br />
 							<input type="password" name="passwd" class="sign_input" placeholder="password" /><br />
@@ -45,7 +45,7 @@
 		<div id="main_page">
 			<section>
 				<!-- ====================================================================================================================== Exemple article ================================================================================================================== -->
-				<!-- 
+				<!--
 										Format d'article a adopter avec les memes, classes
 				-->
 				<article class="product_art">
