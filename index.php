@@ -14,7 +14,7 @@
 			<div class="main_menu">
 				<ul>
 					<a href="index.php"><li>INDEX</li></a>
-					<li>CART</li>
+					<a href="#"><li>CART</li></a>
 				</ul>
 			</div>
 			<div id="right_header">
