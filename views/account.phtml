@@ -1,44 +1,66 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="style/global.css" />
-	<link rel="stylesheet" type="text/css" href="style/account.css" />
+	<link rel="stylesheet" type="text/css" href="../style/global.css" />
+	<link rel="stylesheet" type="text/css" href="../style/account.css" />
 	<title>Amazonne - Site officiel</title>
 </head>
-	<body>
-		<header>
-			+
-			<div id="left_header">
-				<h1>Amazonne</h1>
-			</div>
-			<!-- Menu -->
-			<div id="right_header">
-				<ul>
-					<a href="src/logout.php" id="sign_out_div">
-						<li>SIGN OUT</li>
-					</a>
-				</ul>
-			</div>
-		</header>
-		<div id="main_page">
-			<section>
-				<?php if (@$_SESSION['logged_on_admin']) : ?>
-					<artcle></article>					
-
-				<?php else if () : ?>
-					<?php echo $valeur; ?>
-					@include_once("user_page.html");
-				<?php endif ?>
-			</section>
-			<footer>
-				<hr />
-				<p>© 2018 - pprikazs & fherbine</p>
-			</footer>
+<body>
+	<header>
+		<div id="left_header">
+			<h1>Amazonne</h1>
 		</div>
-		<div>
-		</div id="back1"></div>
-	</body>
+		<!-- Menu -->
+		<div id="right_header">
+			<ul>
+				<a href="src/logout.php" id="sign_out_div">
+					<li>SIGN OUT</li>
+				</a>
+			</ul>
+		</div>
+	</header>
+	<div id="main_page">
+		<section>
+			<article>
+				<h2>Add a product</h2>
+				<form method="post" action="#" id="add_item">
+					<div>
+						<input type="text" name="art_cont" class="admin_inp" placeholder="Title" />
+						<select name="art_categ" id="art_categ">
+							<optgroup label="High tech">
+								<option value="Smartphones">Smartphones</option>
+								<option value="Computers">Computers</option>
+								<option value="Screens">TV & screens</option>
+							</optgroup>
+							<optgroup label="Books">
+								<option value="sci_fi">Sci fi</option>
+								<option value="Mangas">Mangas</option>
+							</optgroup>
+							<optgroup label="Others">
+								<option value="Outfit">Outfit</option>
+								<option value="Accessories">Accessories</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<div>
+						<p>Describe Item:</p>
+						<textarea name="art_desc" class="admin_desc"></textarea>
+					</div>
+
+					<div>
+						<div><input type="number" name="art_cost" class="admin_inp" min="0" placeholder="price" /><label>€</label></div>
+						<input type="submit" name="submit" value="ADD" />
+					</div>
+				</form>
+			</article>
+			<hr />
+		</section>
+		<footer>
+			<hr />
+			<p>© 2018 - pprikazs & fherbine</p>
+		</footer>
+	</div>
+</body>
 </html>

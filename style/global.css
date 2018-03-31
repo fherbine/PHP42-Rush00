@@ -53,8 +53,16 @@ h1
 	width:60%;
 	padding: 15px;
 }
+.main_menu
+{
+	width:30%;
+	border: 1px solid black;
+}
 .main_menu ul
 {
+	width:100%;
+	border: 1px solid black;
+	color: black;
 	list-style-type: none;
 	display: flex;
 	flex-direction: raw;
@@ -62,6 +70,7 @@ h1
 .main_menu a
 {
 	text-decoration: none;
+	color: black;
 }
 /* ------------------------------------------------------------------------------ Articles spec -------------------------------------------------------------------- */
 /* ----------------- main layout ----------- */
