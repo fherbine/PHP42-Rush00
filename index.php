@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 <html>
-<?php var_dump($_SESSION) ?>
+<?php
+	session_start();
+var_dump($_SESSION) ?>
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="style/global.css" />
@@ -65,8 +66,8 @@
 					<div class="art_aside">
 						<h3 class="art_cost">124€</h3>
 						<div>
-						<form action="#" method="get" class="art_form"> 
-							<input type="submit" name="art_title" value="ADD TO CART" class="art_sub" /> 
+						<form action="#" method="get" class="art_form">
+							<input type="submit" name="art_title" value="ADD TO CART" class="art_sub" />
 						</form>
 						<form action="#" method="get" class="art_form">
 							<input type="submit" name="art_title" value="BUY" class="art_sub" />

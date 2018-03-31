@@ -18,7 +18,7 @@ Table Utilisateur :
 ]
 
 
-Table Commandes : 
+Table Commandes :
   "Une entre par commande, il peux y avoir plusieur fois la meme valeur"
 [
   0 => [
@@ -47,7 +47,8 @@ Table Commandes :
 
 Table Article :
 [
-  "art_cont" => [
+  "art_title" => [
+		"art_categ" => [];
     "art_img" => "content_url",
     "art_desc" => (base64)"content",
     "art_cost" => "prix",
