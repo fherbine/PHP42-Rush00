@@ -56,21 +56,36 @@ h1
 .main_menu
 {
 	width:30%;
-	border: 1px dotted red;
+	/*border: 1px dotted red;*/
 }
 .main_menu ul
 {
-	/*width:100%;*/
-	border: 1px solid black;
+	width:100%;
+	/*border: 1px solid black;*/
 	color: black;
 	list-style-type: none;
 	display: flex;
 	flex-direction: raw;
+	justify-content: space-around;
+	padding-top: 30px;
+}
+.main_menu div
+{
+	/*border: 1px solid grey;*/
+	width: 30%;
+	text-align: center;
 }
 .main_menu a
 {
+	/*padding: 20px;*/
+	/*border: 1px solid black;*/
 	text-decoration: none;
 	color: black;
+}
+.main_menu a:hover
+{
+	color: white;
+	text-shadow: -1px -1px black;
 }
 /* ------------------------------------------------------------------------------ Articles spec -------------------------------------------------------------------- */
 /* ----------------- main layout ----------- */
