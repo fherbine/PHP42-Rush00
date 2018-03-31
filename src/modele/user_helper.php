@@ -1,18 +1,18 @@
 <?php
 
-function get_accounts($path_file)
+function get_accounts($dir_path, $file_path)
 {
   $accounts;
 
-  if (!file_exists('../bdd/passwd'))
+  if (!file_exists($file_path))
   {
-      @mkdir('../bdd/', 0777, TRUE);
+      @mkdir($dir_path, 0777, TRUE);
       $accounts = [];
-      file_put_contents('../bdd/passwd', serialize($accounts));
+      file_put_contents($file_path, serialize($accounts));
   }
   else
   {
-      $accounts = file_get_contents('../bdd/passwd');
+      $accounts = file_get_contents($file_path);
       $accounts = unserialize($accounts);
       if ($accounts === FALSE)
         $accounts = [];
@@ -30,11 +30,17 @@ function account_exits($accounts, $login)
     return (FALSE);
 }
 
-function create_account($accounts, $values, $path_file)
+function create_account($accounts, $values, $file_path)
 {
     $accounts[$values['login']] = $values;
     $accounts = serialize($accounts);
-    file_put_contents('../bdd/passwd', $accounts);
+    file_put_contents($file_path, $accounts);
+}
+
+function create_admin_account($accounts, $values, $file_path)
+{
+    $values['admin'] = TRUE;
+    create_account($accounts, $values, $file_path);
 }
 
 function check_passwd($account, $passwd)

@@ -1,8 +1,8 @@
 <?php
 
-function redirect($state, $path)
+function redirect($path, $state)
 {
-  header("Location : " . $path, TRUE, $state)
+  header("Location : " . $path, TRUE, $state);
 }
 
 ?>
