@@ -53,6 +53,16 @@ h1
 	width:60%;
 	padding: 15px;
 }
+.main_menu ul
+{
+	list-style-type: none;
+	display: flex;
+	flex-direction: raw;
+}
+.main_menu a
+{
+	text-decoration: none;
+}
 /* ------------------------------------------------------------------------------ Articles spec -------------------------------------------------------------------- */
 /* ----------------- main layout ----------- */
 .product_art
