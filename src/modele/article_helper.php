@@ -20,7 +20,18 @@ function get_articles($dir_path, $file_path)
   return ($articles);
 }
 
-function creat_article($articles, $key, $article, $file_path)
+function article_exits($accounts, $title)
+{
+    foreach ($accounts as $key => $value)
+    {
+      if ($title === $key)
+        return $value;
+    }
+    return (FALSE);
+}
+
+
+function create_article($articles, $key, $article, $file_path)
 {
   $articles[$keys] = $article;
   $articles = serialize($articles);
