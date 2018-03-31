@@ -22,9 +22,9 @@ function  add_account()
             $values['login'] = @$_POST['login'];
             $values['passwd'] = hash('whirlpool', @$_POST['passwd']);
             $values['realname'] = @$_POST['name'];
-            $values['admin'] = FALSE;
+            $values['admin'] = TRUE;
             create_account($accounts, $values, $bdd_file_path);
-            redirect('../views/success.phtml', 301);
+            redirect('../views/success.html', 301);
         }
 		else empty_signup();
     }

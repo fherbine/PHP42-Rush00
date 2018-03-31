@@ -1,15 +1,15 @@
 <?php
 
-include_once ('auth.php');
 include_once ('const.php');
 include_once ('modele/render.php');
+include_once ('modele/user_helper.php');
 
 function auth($login, $passwd)
 {
     $accounts;
     $account;
     $bdd_dir_path = ROOT . DS . 'bdd';
-    $bdd_file_path = $path .DS . 'passwd';
+    $bdd_file_path = $bdd_dir_path .DS . 'passwd';
 
     $accounts = get_accounts($bdd_dir_path, $bdd_file_path);
     if (($account = account_exits($accounts, $passwd, $bdd_file_path)) !== FALSE)

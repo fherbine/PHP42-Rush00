@@ -37,12 +37,6 @@ function create_account($accounts, $values, $file_path)
     file_put_contents($file_path, $accounts);
 }
 
-function create_admin_account($accounts, $values, $file_path)
-{
-    $values['admin'] = TRUE;
-    create_account($accounts, $values, $file_path);
-}
-
 function check_passwd($account, $passwd)
 {
     if (hash('whirlpool', $passwd) === $account['passwd'])
