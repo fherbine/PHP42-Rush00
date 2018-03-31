@@ -1,3 +1,7 @@
+<?php
+	include("get_articles.php");
+	// autre stuff a include login ...
+?>
 <!DOCTYPE html>
 <html>
 <head>
