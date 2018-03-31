@@ -42,8 +42,25 @@
 	flex-direction: raw;
 	justify-content: space-around;
 }
+#add_item div:nth-child(3) label
+{
+	width: 30%;
+}
+#art_cost
+{
+	float: left;
+}
+
 #add_item textarea
 {
 	width:70%;
 	height: 50px;
+}
+.admin_inp
+{
+	height:25px;
+}
+#add_item div:nth-child(1) .admin_inp
+{
+	width: 60%;
 }
