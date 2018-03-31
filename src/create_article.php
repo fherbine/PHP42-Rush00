@@ -1,12 +1,14 @@
 <?php
 
 include_once ("const.php");
+include_once ("modele/render.php");
+include_once ("modele/article_helper.php");
 
 function create_article()
 {
   $articles;
   $bdd_dir_path = ROOT . DS . 'bdd';
-  $bdd_file_path = ROOT . DS . 'bdd' . DS . 'passwd';
+  $bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
 
   if (@$_GET['submit'] === 'OK')
   {

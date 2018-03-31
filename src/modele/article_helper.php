@@ -22,7 +22,7 @@ function get_articles($dir_path, $file_path)
 
 function creat_article($articles, $key, $article, $file_path)
 {
-  $articles[$keys = $article;
+  $articles[$keys] = $article;
   $articles = serialize($articles);
   file_put_contents($file_path, $articles);
 }
