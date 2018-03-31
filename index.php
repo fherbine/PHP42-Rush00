@@ -17,8 +17,11 @@
 			</div>
 			<div class="main_menu">
 				<ul>
-					<a href="index.php"><li>INDEX</li></a>
-					<a href="#"><li>CART</li></a>
+					<div><a href="index.php"><li>INDEX</li></a></div>
+					<div><a href="#"><li>CART</li></a></div>
+					<?php if (@$_SESSION['logged_on_user'] != null): ?>
+					<div><a href="views/account.phtml"><li>ACCOUNT</li></a></div>
+					<?php endif;?>
 				</ul>
 			</div>
 			<div id="right_header">

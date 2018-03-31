@@ -88,3 +88,34 @@
 	border: 1px inset #ffb303;
 	text-shadow: -1px -1px 2px #ffb303;
 }
+#add_categ_box
+{
+	display: flex;
+	flex-direction: raw;
+	justify-content: space-around;
+}
+#add_categ_box form
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 70px;
+}
+#acateg_sub, #dcateg_sub
+{
+	width:30%;
+	border: none;
+	background-color: #ff9900;
+	border: 1px outset #ffb303;
+	height:40px;
+	color: white;
+	font-size: 0.6vw;
+	text-shadow: 1px 1px 0px black;
+}
+#acateg_sub:hover, #dcateg_sub:hover
+{
+	background-color: #ff9900;
+	text-shadow: -1px -1px 2px #ffb303;
+	border: 1px inset #ffb303;
+}
