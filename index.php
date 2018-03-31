@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php var_dump($_SESSION) ?>
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="style/global.css" />

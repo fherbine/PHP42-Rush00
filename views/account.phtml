@@ -7,7 +7,6 @@
 	</head>
 	<body>
 		<header>
-			+
 			<div id="left_header">
 				<h1>Amazonne</h1>
 			</div>
@@ -23,6 +22,7 @@
 		<div id="main_page">
 			<section>
 				<?php
+						var_dump($_SESSION);
 						if (@$_SESSION['logged_on_admin'] === TRUE)
 						{
 							include_once ('home_admin.phtml');
