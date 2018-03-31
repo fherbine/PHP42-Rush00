@@ -20,6 +20,24 @@ function get_articles($dir_path, $file_path)
   return ($articles);
 }
 
+
+function article_encode($article)
+{
+  foreach ($article as $key => $value) {
+    $article[$key] = base64_encode($value);
+  }
+  return $article;
+}
+
+
+function article_decode($article)
+{
+  foreach ($article as $key => $value) {
+    $article[$key] = base64_decode($value);
+  }
+  return $article;
+}
+
 function article_exits($accounts, $title)
 {
     foreach ($accounts as $key => $value)
@@ -33,7 +51,8 @@ function article_exits($accounts, $title)
 
 function create_article($articles, $key, $article, $file_path)
 {
-  $articles[$keys] = $article;
+  $article = article_encode($article);
+  $articles[$key] = $article;
   $articles = serialize($articles);
   file_put_contents($file_path, $articles);
 }

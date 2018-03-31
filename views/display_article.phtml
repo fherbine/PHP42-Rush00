@@ -1,0 +1,25 @@
+<article class="product_art">
+	<div class="art_img">
+		<img src="<?= $article['art_img'] ?>"alt="'.$art_title.'" title="'.$art_title.'" /> <!--penser image backup si non donné ... -->
+	</div>
+
+	<div class="art_desc">
+		<h2 class="art_title"> <?= $article['art_title'] ?></h>'</h2>
+			<p>
+				<?= $article['art_desc'] ?>
+			</p>
+	</div>
+
+	<div class="art_aside">
+		<h3 class="art_cost">'<?= $article['art_cost'] ?>'</h3>
+		<div>
+			<form action="#" method="get" class="art_form"> <!-- GET ? -->
+				<input type="submit" name="<?= $article['art_title'] ?>" value="ADD TO CART" class="art_sub" /> <!-- BUY(art_id) -->
+			</form>
+			<form action="#" method="get" class="art_form"> <!-- GET ? -->
+				<input type="submit" name="<?= $article['art_title'] ?>" value="BUY" class="art_sub" /> <!-- BUY(art_id) -->
+			</form>
+		</div>
+	</div>
+</article>
+<hr />

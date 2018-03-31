@@ -20,14 +20,14 @@ function add_article()
       && @$_POST['art_img'] != NULL
       && @$_POST['art_cost'] != NULL)
       {
-          $article['art_title'] = base64_encode(@$_POST['art_title']);
-          $article['art_categ'] = base64_encode(@$_POST['art_categ']);
-          $article['art_desc'] = base64_encode(@$_POST['art_desc']);
-          $article['art_img'] = base64_encode(@$_POST['art_img']);
-          $article['art_cost'] = base64_encode(@$_POST['art_cost']);
+          $article['art_title'] = @$_POST['art_title'];
+          $article['art_categ'] = @$_POST['art_categ'];
+          $article['art_desc'] = @$_POST['art_desc'];
+          $article['art_img'] = @$_POST['art_img'];
+          $article['art_cost'] = @$_POST['art_cost'];
           create_article($articles, $article['art_title'], $article, $bdd_file_path);
           echo "ok";
-          //redirect('', 301);
+          redirect('../views/account.phtml', 301);
       }
       else redirect('../views/account.phtml', 302);
   }

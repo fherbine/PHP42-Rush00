@@ -1,6 +1,8 @@
 <html>
 <?php
 	session_start();
+	require_once ('src/modele/article_helper.php');
+	require_once ('src/const.php');
 ?>
 <head>
 	<meta charset="utf-8" />
@@ -47,37 +49,16 @@
 		</header>
 		<div id="main_page">
 			<section>
-				<!-- ====================================================================================================================== Exemple article ================================================================================================================== -->
-				<!--
-										Format d'article a adopter avec les memes, classes
-				-->
-				<!-- <article class="product_art">
-					<div class="art_img">
-						<img src="http://s2.e-monsite.com/2010/01/19/775072721-1235743680-lampe-a-l-huile-jpg.jpg" alt="<titre de l'article>" title="<titre de l'article>" />
-					</div>
-
-					<div class="art_desc">
-						<h2 class="art_title">Lampe a huile</h2>
-						<p>
-							Mensarum enim voragines et varias voluptatum inlecebras, ne longius progrediar, praetermitto illuc transiturus quod quidam per ampla spatia urbis subversasque silices sine periculi metu properantes equos velut publicos signatis quod dicitur calceis agitant, familiarium agmina tamquam praedatorios globos post terga trahentes ne Sannione quidem, ut ait comicus, domi relicto. quos imitatae matronae complures opertis capitibus et basternis per latera civitatis cuncta discurrunt.
-						</p>
-					</div>
-
-					<div class="art_aside">
-						<h3 class="art_cost">124€</h3>
-						<div>
-						<form action="#" method="get" class="art_form">
-							<input type="submit" name="art_title" value="ADD TO CART" class="art_sub" />
-						</form>
-						<form action="#" method="get" class="art_form">
-							<input type="submit" name="art_title" value="BUY" class="art_sub" />
-						</form>
-						</div>
-					</div>
-				</article>
-				<hr /> -->
-				<!-- ====================================================================================================================== Exemple article ================================================================================================================== -->
-				<!--php : articles cf <article> divided by <hr/> !-->
+				<?php
+					$bdd_dir_path = ROOT . DS . 'bdd';
+					$bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
+					$articles = get_articles($bdd_dir_path, $bdd_file_path);
+					foreach ($articles as $article)
+					{
+						$article = article_decode($article);
+						include ('views/display_article.phtml');
+					}
+				?>
 			</section>
 			<footer>
 				<hr />

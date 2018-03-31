@@ -15,7 +15,7 @@
 			<!-- Menu -->
 			<div id="right_header">
 				<ul>
-					<a href="src/logout.php" id="sign_out_div">
+					<a href="../src/logout.php" id="sign_out_div">
 						<li>SIGN OUT</li>
 					</a>
 				</ul>
@@ -24,7 +24,6 @@
 		<div id="main_page">
 			<section>
 				<?php
-						var_dump($_SESSION);
 						if (@$_SESSION['logged_on_admin'] === TRUE)
 						{
 							include_once ('home_admin.phtml');
