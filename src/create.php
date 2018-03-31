@@ -1,6 +1,7 @@
 <?php
 
 include_once ('const.php');
+include_once ('errors.php');
 include_once ('modele/render.php');
 include_once ('modele/user_helper.php');
 
@@ -25,7 +26,7 @@ function  add_account()
             create_account($accounts, $values, $bdd_file_path);
             redirect('../views/success.phtml', 301);
         }
-        else redirect('../index.php', 302);
+		else empty_signup();
     }
     else redirect('../index.php', 302);
 }
