@@ -20,9 +20,9 @@ function get_articles($dir_path, $file_path)
   return ($articles);
 }
 
-function creat_article($articles, $article, $file_path)
+function creat_article($articles, $key, $article, $file_path)
 {
-  $articles[$article['login']] = $article;
+  $articles[$keys = $article;
   $articles = serialize($articles);
   file_put_contents($file_path, $articles);
 }

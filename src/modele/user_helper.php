@@ -30,9 +30,9 @@ function account_exits($accounts, $login)
     return (FALSE);
 }
 
-function create_account($accounts, $values, $file_path)
+function create_account($accounts, $key,$values, $file_path)
 {
-    $accounts[$values['login']] = $values;
+    $accounts[] = $values;
     $accounts = serialize($accounts);
     file_put_contents($file_path, $accounts);
 }
