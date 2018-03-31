@@ -1,8 +1,8 @@
 <?php
 
-include ('auth.php');
-include ('const.php')
-include ('modele/render.php');
+include_once ('auth.php');
+include_once ('const.php');
+include_once ('modele/render.php');
 
 function check_login()
 {
@@ -26,10 +26,11 @@ function login()
 {
     session_start();
     if (check_login() === TRUE)
-      redirect(ROOT . DS . 'index.php', 302);
+      redirect('../index.php', 302);
     else
-      redirect(ROOT . DS . 'index.php', 302);
+      redirect('../index.php', 302);
 }
 
 login();
+
 ?>

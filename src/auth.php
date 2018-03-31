@@ -1,7 +1,7 @@
 <?php
 
-include ('const.php');
-include ('modele/user_helper.php');
+include_once ('const.php');
+include_once ('modele/user_helper.php');
 
 function auth($login, $passwd)
 {
