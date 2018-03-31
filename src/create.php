@@ -1,8 +1,8 @@
 <?php
 
-include ('const.php');
-include ('modele/render.php');
-include ('modele/user_helper.php');
+include_once ('const.php');
+include_once ('modele/render.php');
+include_once ('modele/user_helper.php');
 
 function  add_account()
 {
