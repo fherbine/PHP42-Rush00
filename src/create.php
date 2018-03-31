@@ -1,8 +1,8 @@
 <?php
 
-include ('const.php');
-include ('modele/render.php');
-include ('modele/user_helper.php');
+include_once ('const.php');
+include_once ('modele/render.php');
+include_once ('modele/user_helper.php');
 
 function  add_account()
 {
@@ -23,12 +23,11 @@ function  add_account()
             $values['realname'] = @$_POST['name'];
             $values['admin'] = FALSE;
             create_account($accounts, $values, $bdd_file_path);
-            echo ("OK\n");
+            redirect('../views/success.phtml', 301);
         }
-        else redirect(ROOT . DS . 'index.php', 302);
+        else redirect('../index.php', 302);
     }
-    else
-      redirect(ROOT . DS . 'index.php', 302);
+    else redirect('../index.php', 302);
 }
 
 add_account();
