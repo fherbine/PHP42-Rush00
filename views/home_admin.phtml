@@ -1,0 +1,31 @@
+<article>
+                <h2>Add a product</h2>
+                <form method="post" action="#" id="add_item">
+                    <div>
+                        <input type="text" name="art_cont" class="admin_inp" placeholder="Title" />
+                        <select name="art_categ" id="art_categ">
+                            <optgroup label="High tech">
+                                <option value="Smartphones">Smartphones</option>
+                                <option value="Computers">Computers</option>
+                                <option value="Screens">TV & screens</option>
+                            </optgroup>
+                            <optgroup label="Books">
+                                <option value="sci_fi">Sci fi</option>
+                                <option value="Mangas">Mangas</option>
+                            </optgroup>
+                            <optgroup label="Others">
+                                <option value="Outfit">Outfit</option>
+                                <option value="Accessories">Accessories</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Describe Item:</p>
+                        <textarea name="art_desc" class="admin_desc"></textarea>
+                    </div>
+                    <div>
+                        <div><input type="number" name="art_cost" class="admin_inp" min="0" placeholder="price" /><label>€</label></div>
+                        <input type="submit" name="submit" value="ADD" />
+                    </div>
+                </form>
+</article>

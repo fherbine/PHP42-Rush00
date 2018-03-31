@@ -1,6 +1,3 @@
-<?php
-?>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -25,13 +22,15 @@
 		</header>
 		<div id="main_page">
 			<section>
-				<?php if (@$_SESSION['logged_on_admin']) : ?>
-					<artcle></article>					
-
-				<?php else if () : ?>
-					<?php echo $valeur; ?>
-					@include_once("user_page.html");
-				<?php endif ?>
+				<?php
+						if (@$_SESSION['logged_on_admin'] === TRUE)
+						{
+							include_once ('home_admin.phtml');
+						}
+						else {
+							include_once ('home_user.phtml');
+						}
+				?>
 			</section>
 			<footer>
 				<hr />
