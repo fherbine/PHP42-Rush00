@@ -167,6 +167,10 @@ h1
 	justify-content: space-around;
 	align-items: center;
 }
+.art_form
+{
+	margin: 2px;
+}
 /* --------------------- details -------------------------- */
 .art_title
 {
@@ -186,7 +190,7 @@ h1
 	margin: auto;
 	border: none;
 	background-color: #ffb303;
-	border: 1px outset orange;
+	border: 1px outset #FFDD33;
 	height:42px;
 	color: white;
 	font-size: 0.6vw;
@@ -195,5 +199,5 @@ h1
 .art_sub:hover
 {
 	background-color: orange;
-	border: 1px inset #ff9900;
+	border: 1px inset #FFDD33;
 }
