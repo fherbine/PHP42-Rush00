@@ -8,18 +8,18 @@
 <article>
     <h2>Add a product</h2>
     <form method="post" action="../src/create_article.php" id="add_item">
-        <div>
+        <div class="ai_fdiv">
             <input type="text" name="art_title" class="admin_inp" placeholder="Title" />
             <input type="text" name="art_img"  class="admin_inp" placeholder="url_img"></input>
             <?php include ('display_categories_checkbox.phtml'); ?>
         </div>
 
-        <div>
+        <div class="ai_fdiv">
             <p>Describe Item:</p>
             <textarea name="art_desc" class="admin_desc"></textarea>
         </div>
 
-        <div>
+        <div class="ai_fdiv">
             <label for="art_cost"> €<input type="number" name="art_cost" class="admin_inp" min="0" placeholder="price" id="art_cost" /></label>
             <input type="submit" name="submit" value="ADD" class="admin_submit"/>
         </div>

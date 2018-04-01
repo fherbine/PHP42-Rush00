@@ -7,7 +7,7 @@
         <?php foreach ($categories as $categorie) : ?>
             <?php $categorie = categorie_decode($categorie); ?>
             <?php if ($categorie != "All"):?>
-                <label for="<?= $categorie ?>"><?= $categorie ?>  <input type="checkbox" name="art_categ" value="<?= $categorie ?>" id="<?= $categorie ?>" class="check_case"/></label>
+                <div><label for="<?= $categorie ?>"><?= $categorie ?>  <input type="checkbox" name="art_categ" value="<?= $categorie ?>" id="<?= $categorie ?>" class="check_case"/></label></div>
             <?php endif;?>
         <?php endforeach; ?>
 </div>

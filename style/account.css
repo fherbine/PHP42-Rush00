@@ -23,9 +23,9 @@
 	flex-direction: raw;
 	justify-content: space-between;
 }
-#add_item div
+.ai_fdiv
 {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	width: 33%;
 	text-align: center;
 }
@@ -39,10 +39,20 @@
 #chk_block
 {
 	width: 100%;
-	border: 1px solid black;
-	/*display: flex;*/
-	/*flex-wrap: wrap;*/
-	/*justify-content: space-between;*/
+	font-size: 0.5vw;
+	/*border: 1px solid black;*/
+	display: flex;
+	flex-direction: raw;
+	justify-content: start;
+	flex-wrap: wrap;
+	/*justify-content: center;*/
+	/*align-items: start;*/
+}
+#chk_block div
+{
+	/*border: 1px solid black;*/
+	width: 30%;
+	padding: 2px;
 }
 #add_item div:nth-child(3)
 {
