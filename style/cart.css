@@ -12,11 +12,11 @@ thead th
 }
 thead th:nth-child(1)
 {
-	width:25%;
+	width:23%;
 }
 thead th:nth-child(2)
 {
-	width: 50%;
+	width: 40%;
 }
 thead th:nth-child(3)
 {
@@ -25,6 +25,10 @@ thead th:nth-child(3)
 thead th:nth-child(4)
 {
 	width: 12%;
+}
+thead th:nth-child(5)
+{
+	width:12%;
 }
 th,td
 {
@@ -42,15 +46,15 @@ thead th
 {
 	background-color: lightgrey;
 }
-tr td:nth-child(1), tr td:nth-child(3), tr td:nth-child(4)
+tr td:nth-child(1), tr td:nth-child(3), tr td:nth-child(4), tr td:nth-child(5)
 {
 	text-align: center;
 }
-tr td:nth-child(4)
+tr td:nth-child(5)
 {
 	/*border: 2px solid blue;*/
 }
-tr td:nth-child(4) a
+tr td:nth-child(5) a
 {
 	font-size: 2vw;
 	padding: 20px;
@@ -58,7 +62,7 @@ tr td:nth-child(4) a
 	color: black;
 	/*border: 2px solid blue;*/
 }
-tr td:nth-child(4) a:hover
+tr td:nth-child(5) a:hover
 {
 	color:red;
 	text-shadow: -1px -1px grey;
