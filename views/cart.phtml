@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../style/global.css" />
-		<link rel="stylesheet" type="text/css" href="../style/account.css" />
+		<link rel="stylesheet" type="text/css" href="../style/cart.css" />
 		<title>Amazonne - Site officiel</title>
 	</head>
 	<body>
@@ -30,13 +30,7 @@
 		<div id="main_page">
 			<section>
 				<?php
-						if (@$_SESSION['logged_on_admin'] === TRUE)
-						{
-							include_once ('home_admin.phtml');
-						}
-						else {
-							include_once ('home_user.phtml');
-						}
+					include_once ('cart_user.phtml');
 				?>
 			</section>
 			<footer>

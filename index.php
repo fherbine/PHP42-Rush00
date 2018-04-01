@@ -18,7 +18,9 @@
 			<div class="main_menu">
 				<ul>
 					<div><a href="index.php"><li>INDEX</li></a></div>
-					<div><a href="#"><li>CART</li></a></div>
+					<?php if (@$_SESSION['logged_on_admin'] == null): ?>
+					<div><a href="views/cart.phtml"><li>CART</li></a></div>
+					<?php endif; ?>
 					<?php if (@$_SESSION['logged_on_user'] != null): ?>
 					<div><a href="views/account.phtml"><li>ACCOUNT</li></a></div>
 					<?php endif;?>
