@@ -21,11 +21,22 @@ function  add_account()
             $values['realname'] = @$_POST['name'];
             $values['admin'] = FALSE;
             create_account($accounts, $values['login'], $values, BDD_PASSWD);
+            if (@$_SESSION["logged_on_admin"] === TRUE)
+              redirect('../views/account.phtml', 302);
             redirect('../views/success.html', 301);
         }
-		      else redirect('../views/auth_failure.html');
+		    else
+        {
+          if (@$_SESSION["logged_on_admin"] === TRUE)
+            redirect('../views/account.phtml', 302);
+          redirect('../views/auth_failure.html');
+        }
     }
-    else redirect('../index.php', 302);
+    else{
+      if (@$_SESSION["logged_on_admin"] === TRUE)
+        redirect('../views/account.phtml', 302);
+      redirect('../index.php', 302);
+    }
 }
 
 add_account();
