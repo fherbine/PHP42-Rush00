@@ -48,9 +48,6 @@ function set_cookie_content($cookie_content)
 
 function get_cookie_content($cookie_content)
 {
-  echo "coucou";
-    var_dump($cookie_content);
-    echo "coucou";
     return unserialize($cookie_content);
 }
 
