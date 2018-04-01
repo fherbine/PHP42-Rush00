@@ -5,10 +5,10 @@
         $categories = get_categories($bdd_dir_path, $bdd_file_path);
     ?>
 
-    <select name="art_categ" id="art_categ">
         <?php foreach ($categories as $categorie) : ?>
-                <?php $categorie = categorie_decode($categorie); ?>
-                <option value="<?= $categorie ?>"><?= $categorie ?></option>
+            <?php $categorie = categorie_decode($categorie); ?>
+            <?php if ($categorie != "All"):?>
+                <label for="<?= $categorie ?>"><?= $categorie ?>  <input type="checkbox" name="art_categ" value="<?= $categorie ?>" id="<?= $categorie ?>" class="check_case"/></label>
+            <?php endif;?>
         <?php endforeach; ?>
-    </select>
 </div>
