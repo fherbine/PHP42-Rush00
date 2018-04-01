@@ -67,8 +67,8 @@
 				<article id="sort_art">
 					<form action="index.php" method="get">
 						<p>Sort by categories : </p>
-						<?php include ('views/display_categories_list.phtml');?>
-						<input type="submit" name="submit" value="OK" />
+						<div><?php include ('views/display_categories_list.phtml');?>
+						<input type="submit" name="submit" value="OK" /></div>
 					</form>
 				</article>
 				<hr />

@@ -104,4 +104,16 @@
 {
 	font-size: 0.7vw;
 }
+article form
+{
+	width: 100%;
+	display: flex;
+	flex-direction: raw;
+	justify-content: space-between;
+	align-items: center;
+}
+article form div
+{
+	display: flex;
+}
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
