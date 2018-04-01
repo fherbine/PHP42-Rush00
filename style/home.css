@@ -1,5 +1,22 @@
 /* -------------------------------------------------------------------- Home page spec ... -------------------------------------------------------------------------------------------------- */
-#sign_in_div, #sign_up_div
+#sign_out_li
+{
+	/*border: 1px solid black;*/
+	width: 50%;
+}
+#sign_out_li a
+{
+	text-decoration: none;
+	color: black;
+	/*border: 1px solid red;*/
+	padding: 20px;
+	font-size: 1vw;
+}
+#sign_out_li:hover
+{
+	color: white;
+}
+#sign_in_div, #sign_up_div, #sign_out_li
 {
 	border: 1px outset #ffb303;
 }
@@ -15,7 +32,7 @@
 {
 	display:none;
 }
-#sign_in_div:hover, #sign_up_div:hover
+#sign_in_div:hover, #sign_up_div:hover, #sign_out_li:hover
 {
 	background-color: #ff9900;
 	border: 1px inset #ffb303;
@@ -76,5 +93,15 @@
 	background-color: #ff9900;
 	border: 1px inset #ffb303;
 	text-shadow: -1px -1px 2px #ffb303;
+}
+#sort_art
+{
+	display: flex;
+	flex-direction: raw;
+	align-items: center;
+}
+#sort_art p
+{
+	font-size: 0.7vw;
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

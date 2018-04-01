@@ -26,6 +26,15 @@
 			</div>
 			<div id="right_header">
 				<ul>
+					<?php if (@$_SESSION['logged_on_user'] != null):?>
+					<div id="sign_out_li">
+						<li>
+							<a href="src/logout.php" id="sign_out_div">
+								SIGN OUT
+							</a>
+						</li>
+					</div>
+					<?php else:?>
 					<div id="sign_in_div">
 						<li>SIGN IN</li>
 						<div id="sign_in_form">
@@ -47,11 +56,17 @@
 						</form>
 						</div>
 					</div>
+				<?php endif;?>
 				</ul>
 			</div>
 		</header>
 		<div id="main_page">
 			<section>
+				<article id="sort_art">
+					<p>Sort by categories : </p>
+					<?php include('views/categories.phtml');?>
+				</article>
+				<hr />
 				<?php
 					$bdd_dir_path = ROOT . DS . 'bdd';
 					$bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
@@ -64,7 +79,6 @@
 				?>
 			</section>
 			<footer>
-				<hr />
 				<p>© 2018 - pprikazs & fherbine</p>
 			</footer>
 		</div>
