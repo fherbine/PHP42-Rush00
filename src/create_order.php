@@ -16,12 +16,9 @@ function add_order()
       redirect('../views/sign_alt.phtml', 302);
     if (isset($_COOKIE[$cookie_name]))
     {
-      var_dump($_COOKIE[$cookie_name]);
       $cookie_content = get_cookie_content($_COOKIE[$cookie_name]);
       if (empty($cookie_content['item']))
       {
-        echo "coucou";
-        exit();
         redirect('../views/cart.phtml', 302);
       }
       else
@@ -29,18 +26,16 @@ function add_order()
         $orders = get_orders(BDD_PATH, BDD_ORDER);
         foreach ($cookie_content['item'] as $key =>$value)
         {
-          $order[@$_SESSION["logged_on_user"]][] = ['art_title' => $key, 'art_quant' => $value];
+          $order['art_title'] = $key;
+          $order['art_quant'] = $value;
         }
-        create_order($orders, $order, BDD_ORDER);
+        create_order($orders, @$_SESSION["logged_on_user"], $order, BDD_ORDER);
         destroy_cookie($cookie_name);
         redirect('../index.php', 302);
       }
     }
     else
     {
-      echo "coucou2";
-
-      exit();
       redirect('../views/cart.phtml', 302);
     }
 }

@@ -1,14 +1,11 @@
 <?php
-	$bdd_dir_path = ROOT . DS . 'bdd';
-	$bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
-	$articles = get_articles($bdd_dir_path, $bdd_file_path);
-	foreach ($articles as $article) :
-		$article = article_decode($article);
+	$orders = get_orders(BDD_PATH, BDD_ORDER);
+	//$articles = get_articles(BD_PATH, BDD_ARTICLE);
+	foreach ($orders as $login => $order) :;
 ?>
 <tr>
-    <td><?= $article['art_title'] ?></td>
-    <td><?= $article['art_desc'] ?></td>
-    <td><?= $article['art_cost'] ?>€</td>
-    <td><a href="../src/remove_article.php?art_title=<?= $article['art_title'] ?>">X</a></td>
+    <td><?= $login ?></td>
+    <td><?= $order['art_title'] ?></td>
+    <td><?= $order['art_quant'] ?>€</td>
 </tr>
 <?php endforeach ?>

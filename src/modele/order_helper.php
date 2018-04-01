@@ -20,9 +20,9 @@ function get_orders($dir_path, $file_path)
   return ($orders);
 }
 
-function create_order($orders, $order, $file_path)
+function create_order($orders, $key, $order, $file_path)
 {
-  $orders[] = $order;
+  $orders[$key] = $order;
   $orders = serialize($orders);
   file_put_contents($file_path, $orders);
 }
