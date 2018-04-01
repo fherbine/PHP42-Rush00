@@ -22,11 +22,11 @@ function  add_account()
             $values['login'] = @$_POST['login'];
             $values['passwd'] = hash('whirlpool', @$_POST['passwd']);
             $values['realname'] = @$_POST['name'];
-            $values['admin'] = TRUE;
+            $values['admin'] = FALSE;
             create_account($accounts, $values['login'], $values, $bdd_file_path);
             redirect('../views/success.html', 301);
         }
-		else empty_signup();
+		      else redirect('../views/auth_failure.html');
     }
     else redirect('../index.php', 302);
 }
