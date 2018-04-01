@@ -2,9 +2,10 @@
 	$bdd_dir_path = ROOT . DS . 'bdd';
 	$bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
 	$articles = get_articles($bdd_dir_path, $bdd_file_path);
-	foreach ($articles as $article) :
-		$article = article_decode($article);
+		foreach ($articles as $article) :
+			$article = article_decode($article);
 ?>
+ <?php if ($article['art_categ'] == $_GET['art_categ'] || !$_GET || $_GET['art_categ'] == "All"):?>
 	<article class="product_art">
 		<div class="art_img">
 			<img src="<?= $article['art_img'] ?>" alt="<?= $article['art_title'] ?> " title="<?= $article['art_title'] ?>" /> <!--penser image backup si non donné ... -->
@@ -30,4 +31,5 @@
 		</div>
 	</article>
 	<hr />
+<?php endif;?>
 <?php endforeach ?>

@@ -9,6 +9,7 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="style/global.css" />
 	<link rel="stylesheet" type="text/css" href="style/home.css" />
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="style/global_low.css" />
 	<title>Amazonne - Site officiel</title>
 </head>
 	<body>
@@ -64,8 +65,11 @@
 		<div id="main_page">
 			<section>
 				<article id="sort_art">
-					<p>Sort by categories : </p>
-					<?php include ('views/display_categories_list.phtml');?>
+					<form action="index.php" method="get">
+						<p>Sort by categories : </p>
+						<?php include ('views/display_categories_list.phtml');?>
+						<input type="submit" name="submit" value="OK" />
+					</form>
 				</article>
 				<hr />
 						<?php include ('views/display_article.phtml'); ?>
