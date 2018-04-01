@@ -46,7 +46,7 @@ function login()
     if (check_login() === TRUE)
       redirect('../index.php', 302);
     else
-      redirect('../index.php', 302);
+      redirect('../views/auth_failure.html', 301);
 }
 
 login();
