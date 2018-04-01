@@ -113,13 +113,25 @@
 	font-size: 0.6vw;
 	text-shadow: 1px 1px 0px black;
 }
+article:nth-child(2)
+{
+	border: 1px solid blue;
+}
 #acateg_sub:hover, #dcateg_sub:hover
 {
 	background-color: #ff9900;
 	text-shadow: -1px -1px 2px #ffb303;
 	border: 1px inset #ffb303;
 }
+#items_box, #users_box
+{
+	border: 1px solid black;
+}
 /* ------------------------------------------ tables --------------------------------------------------------------- */
+#items_box, #users_box
+{
+	border: 1px solid black;
+}
 table
 {
 	table-layout: fixed;
@@ -183,4 +195,13 @@ tr td:nth-child(4) a:hover
 {
 	color:red;
 	text-shadow: -1px -1px grey;
+}
+fieldset
+{
+	margin: 10px;
+	width:80%;
+	margin: auto;
+	display: flex;
+	flex-direction: raw;
+	justify-content: space-around;
 }
