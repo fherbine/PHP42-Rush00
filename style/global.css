@@ -117,7 +117,7 @@ h1
 .art_aside
 {
 	/*border: 1px solid black;*/
-	width:20%;
+	width:30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -126,11 +126,18 @@ h1
 .art_form
 {
 	margin: 2px;
+	border: 1px solid green;
+	text-align: center;
 }
 /* --------------------- details -------------------------- */
 .art_title
 {
 	text-align: center;
+}
+.but_div
+{
+	width:100%;
+	border: 1px solid red;
 }
 .art_cost
 {
@@ -140,15 +147,23 @@ h1
 	text-shadow: 1px 1px 1px black;
 	font-weight: 100;
 }
+.art_sub a
+{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	padding-right: 15%;
+	padding-left: 15%;
+	border: 1px solid white;
+}
 .art_sub
 {
-	width: 140%;
-	margin: auto;
+	width: 100%;
 	border: none;
+	padding-top:10px;
+	padding-bottom:10px;
 	background-color: #ffb303;
 	border: 1px outset #FFDD33;
-	height:42px;
-	color: white;
 	font-size: 0.6vw;
 	text-shadow: 1px 1px 0px grey;
 }
