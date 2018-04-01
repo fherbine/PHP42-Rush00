@@ -35,7 +35,7 @@ function  add_account()
           if (@$_SESSION["logged_on_admin"] === TRUE)
             redirect('../views/account.phtml', 302);
           else
-            redirect('../views/auth_failure.html');
+            redirect('../views/auth_failure.html', 302);
         }
     }
     else{
