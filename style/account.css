@@ -216,10 +216,45 @@ tr td:nth-child(4) a:hover
 }
 fieldset
 {
-	margin: 10px;
 	width:80%;
 	margin: auto;
+}
+fieldset form
+{
 	display: flex;
 	flex-direction: raw;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
+}
+fieldset form div
+{
+	/*border: 1px solid black;*/
+	width:15%;
+}
+fieldset form div input[type="text"], fieldset form div input[type="password"]
+{
+	width: 100%;
+}
+fieldset form div:nth-child(5)
+{
+	text-align: center;
+	width: 20%;
+}
+fieldset form div:nth-child(5) input
+{
+	border: none;
+	border: 1px solid blue;
+	width: 40%;
+	background-color: #ff9900;
+	border: 1px outset #ffb303;
+	height:40px;
+	color: white;
+	font-size: 0.6vw;
+	text-shadow: 1px 1px 0px black;
+}
+fieldset form div:nth-child(5) input:hover
+{
+	background-color: #ff9900;
+	text-shadow: -1px -1px 2px #ffb303;
+	border: 1px inset #ffb303;
 }
