@@ -196,3 +196,12 @@ tr td:nth-child(4) a:hover
 	color:red;
 	text-shadow: -1px -1px grey;
 }
+fieldset
+{
+	margin: 10px;
+	width:80%;
+	margin: auto;
+	display: flex;
+	flex-direction: raw;
+	justify-content: space-around;
+}
