@@ -50,6 +50,8 @@ function check_login()
           update_cookie();
           return (TRUE);
         }
+        var_dump($account);
+        exit;
     }
   }
   $_SESSION["logged_on_user"] = "";
