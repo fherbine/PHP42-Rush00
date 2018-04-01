@@ -51,7 +51,7 @@
 					<div id="sign_up_div">
 						<li>SIGN UP</li>
 						<div id="sign_up_form">
-						<form method="post" action="src/create.php"> <!--- src.php ? Inscription -->
+						<form method="post" action="src/create_account.php"> <!--- src.php ? Inscription -->
 							<input type="text" name="login" class="sign_input" placeholder="Login" /><br />
 							<input type="text" name="realname" class="sign_input" placeholder="Name" /><br />
 							<input type="password" name="passwd" class="sign_input" placeholder="password" /><br />
