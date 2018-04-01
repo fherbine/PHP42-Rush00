@@ -1,7 +1,21 @@
-<tr>
-	<td>article2</td>
-	<td>This is a tst</td>
-	<td>35€</td>
-	<td>2</td>
-	<td><a href="#">X</a></td>
-</tr>
+<?php if (isset($_COOKIE['card'])) : ?>
+	<?php
+		//var_dump($_COOKIE['card']);
+				$articles = get_articles(BDD_PATH, BDD_ARTICLE);
+				$cookie_content = get_cookie_content($_COOKIE['card']);
+				foreach ($articles as $art_title => $article) :
+						$article = article_decode($article);
+						if (array_key_exists($art_title, $cookie_content['item'])) :
+							?>
+							<tr>
+								<td><?= $art_title; ?></td>
+								<td><?= $article['art_desc'];?></td>
+								<td><?= $article['art_cost'] ?></td>
+								<td><?= $cookie_content['item'][$art_title]; ?></td>
+								<td><a href="#">X</a></td>
+							</tr>
+						<?php endif; ?>
+				<?php endforeach; ?>
+<?php else : ?>
+
+<?php endif; ?>

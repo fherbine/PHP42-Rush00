@@ -28,8 +28,8 @@ function add_user_in_cookie($cookie_value, $login)
   return serialize($cookie_value);
 }
 
-function get_cookie_content($cookie_name)
+function get_cookie_content($cookie_content)
 {
-    unserialize($_COOKIE[$cookie_name]);
+    return unserialize($cookie_content);
 }
 ?>
