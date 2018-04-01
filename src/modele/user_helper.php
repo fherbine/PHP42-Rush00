@@ -29,7 +29,24 @@ function account_exits($accounts, $login)
     return (FALSE);
 }
 
+function update_passwd($account, $oldpw, $newpw)
+{
+  if (hash('whirlpool', $oldpw) === $account['passwd'])
+  {
+      $account['passwd'] = hash('whirlpool', $newpw);
+      return ($account);
+  }
+  return (FALSE);
+}
+
 function create_account($accounts, $key, $values, $file_path)
+{
+    $accounts[$key] = $values;
+    $accounts = serialize($accounts);
+    file_put_contents($file_path, $accounts);
+}
+
+function update_account($accounts, $key, $values, $file_path)
 {
     $accounts[$key] = $values;
     $accounts = serialize($accounts);
