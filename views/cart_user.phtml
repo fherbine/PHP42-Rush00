@@ -1,6 +1,5 @@
 <?php if (isset($_COOKIE['card'])) : ?>
 	<?php
-		//var_dump($_COOKIE['card']);
 				$articles = get_articles(BDD_PATH, BDD_ARTICLE);
 				$cookie_content = get_cookie_content($_COOKIE['card']);
 				foreach ($articles as $art_title => $article) :
@@ -12,7 +11,7 @@
 								<td><?= $article['art_desc'];?></td>
 								<td><?= $article['art_cost'] ?></td>
 								<td><?= $cookie_content['item'][$art_title]; ?></td>
-								<td><a href="#">X</a></td>
+								<td><a href="../src/remove_to_cart.php?art_title=<?= $art_title;?>">X</a></td>
 							</tr>
 						<?php endif; ?>
 				<?php endforeach; ?>
