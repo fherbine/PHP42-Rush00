@@ -1,0 +1,71 @@
+<?php session_start(); 
+	// if (@$_SESSION['logged_on_user'] != null)
+		// redirect('../index.php', 302);
+?>
+<?php
+	include ("../src/modele/render.php");
+	if (@$_SESSION['logged_on_user'] != null)
+		redirect('../index.php', 302);
+?>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../style/global.css" />
+	<link rel="stylesheet" type="text/css" href="../style/sign_alt.css" />
+	<title>Amazonne - Site officiel</title>
+</head>
+<body>
+	<header>
+		<div id="left_header">
+			<h1>Amazonne</h1>
+		</div>
+		<div class="main_menu">
+			<ul>
+				<div><a href="../index.php"><li>INDEX</li></a></div>
+				<?php if (@$_SESSION['logged_on_admin'] == null): ?>
+					<div><a href="cart.phtml"><li>CART</li></a></div>
+				<?php endif; ?>
+				<div><a href="account.phtml"><li>ACCOUNT</li></a></div>
+			</ul>
+		</div>
+		<div id="right_header">
+			<ul>
+			</ul>
+		</div>
+	</header>
+	<div id="main_page">
+		<section>
+			<article>
+				<div class="sign_ablock1">
+					<div class="sign_ablock2">
+						<h3>Sign in</h3>
+						<form method="post" action="../src/login.php">
+							<input type="text" name="login" placeholder="Login" /> <br/>
+							<input type="password" name="passwd" placeholder="Password" /><br/>
+							<input type="submit" name="submit" value="OK" />
+						</form>
+					</div>
+				</div>
+				<div class="sign_ablock3">
+					<div class="sign_ablock4">
+						<h3>Sign up</h3>
+						<form method="post" action="../src/create_account.php">
+							<input type="text" name="login" placeholder="Login" /> <br/>
+							<input type="text" name="realname" placeholder="Name" /><br/>
+							<input type="password" name="passwd" placeholder="Password" /><br/>
+							<input type="submit" name="submit" value="OK" />
+						</form>
+					</div>
+				</div>
+			</article>
+			<br />
+		</section>
+		<footer>
+			<hr />
+			<p>© 2018 - pprikazs & fherbine</p>
+		</footer>
+	</div>
+	<div>
+	</div id="back1"></div>
+</body>
+</html>
