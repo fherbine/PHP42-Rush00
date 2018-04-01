@@ -258,3 +258,78 @@ fieldset form div:nth-child(5) input:hover
 	text-shadow: -1px -1px 2px #ffb303;
 	border: 1px inset #ffb303;
 }
+/* ---------------------------------------------------- user session -------------------------------------------*/
+.user_ablock1
+{
+	/*border: 1px solid black;*/
+	display: flex;
+}
+.user_ablock2
+{
+	width:100%;
+}
+/* --- First block -- */
+.user_ablock2:nth-child(1)
+{
+	border-right: 1px solid black;
+}
+.user_ablock2
+{
+	text-align: center;
+}
+.user_ablock2 form
+{
+	margin: auto;
+	margin-bottom: 20px;
+	/*border: 1px solid green;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+.user_ablock2 input[type="text"], .user_ablock2 input[type="password"]
+{
+	width:60%;
+	height: 25px;
+}
+.user_ablock2 input[type="submit"]
+{
+	border:none;
+	/*border: 1px solid blue;*/
+	width: 40%;
+	background-color: #ff9900;
+	border: 1px outset #ffb303;
+	height:40px;
+	color: white;
+	font-size: 0.6vw;
+	text-shadow: 1px 1px 0px black;
+}
+.user_ablock2 input[type="submit"]:hover
+{
+	background-color: #ff9900;
+	text-shadow: -1px -1px 2px #ffb303;
+	border: 1px inset #ffb303;
+}
+/* -- Second one -- */
+.user_ablock2:nth-child(2)
+{
+	border-left: 1px solid lightgrey;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.user_ablock2:nth-child(2) a
+{
+	/*border: 1px solid pink;*/
+	font-size: 2vw;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.user_ablock2:nth-child(2) a:hover
+{
+	text-shadow: -1px -1px grey;
+	color: red;
+}
