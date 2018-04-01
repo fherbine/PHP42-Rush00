@@ -67,7 +67,7 @@
 			<section>
 				<article id="sort_art">
 					<p>Sort by categories : </p>
-					<?php include ('views/categories.phtml');?>
+					<?php include ('views/display_categories_list.phtml');?>
 				</article>
 				<hr />
 						<?php include ('views/display_article.phtml'); ?>

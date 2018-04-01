@@ -11,7 +11,7 @@
         <div>
             <input type="text" name="art_title" class="admin_inp" placeholder="Title" />
             <input type="text" name="art_img"  class="admin_inp" placeholder="url_img"></input>
-            <?php include ('categories.phtml'); ?>
+            <?php include ('display_categories_checkbox.phtml'); ?>
         </div>
 
         <div>
@@ -38,7 +38,7 @@
         <div>
             <h3>Remove a categorie :</h3>
             <form action="../src/remove_categorie.php" method="post">
-                <?php include ('categories.phtml'); ?>
+                <?php include ('display_categories_list.phtml'); ?>
                 <input type="submit" name="submit" value="DELETE" id="dcateg_sub"/>
             </form>
         </div>
