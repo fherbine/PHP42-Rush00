@@ -2,14 +2,19 @@
 
 function add_to_cart()
 {
-  $bdd_dir_path = ROOT . DS . 'bdd';
-  $bdd_file_path = ROOT . DS . 'bdd' . DS . 'categorie';
+  $cooki_name;
 
-  if (@$_POST['submit'] === "ADD TO CART")
+  $cookie_name = "card";
+  if (@$_GET['submit'] === "ADD TO CART")
   {
-    if (!isset($_COOKIE["card"]))
-      create_cooki("card");
-    add_item_to_card();
+    if (get_article_by_name(BDD_PATH, BDD_ARTICLE, @$_GET['art_title'] !== FALSE)
+    {
+        if (!isset($_COOKIE["card"]))
+          create_cooki($cookie_name, @$_GET['art_title']);
+        else
+          add_item_to_cookie($cookie_name, @$_GET['art_title']);
+        add_user_in_cookie($cookie_name, @$_SESSION["logged_on_user"]);
+    }
   }
   else redirect('../views/account.phtml', 302);
 }
