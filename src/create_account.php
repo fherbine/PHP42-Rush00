@@ -19,7 +19,7 @@ function  add_account()
         {
             $values['login'] = @$_POST['login'];
             $values['passwd'] = hash('whirlpool', @$_POST['passwd']);
-            $values['realname'] = @$_POST['name'];
+            $values['realname'] = @$_POST['realname'];
             if (@$_POST['admin'] != NULL)
               $values['admin'] = TRUE;
             else
