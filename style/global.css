@@ -126,7 +126,7 @@ h1
 .art_form
 {
 	margin: 2px;
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 	text-align: center;
 }
 /* --------------------- details -------------------------- */
@@ -137,7 +137,7 @@ h1
 .but_div
 {
 	width:100%;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 .art_cost
 {
@@ -154,12 +154,13 @@ h1
 	padding: 10px;
 	padding-right: 15%;
 	padding-left: 15%;
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 }
 .art_sub
 {
-	width: 100%;
-	border: none;
+	width: 80%;
+	margin: auto;
+	/*border: none;*/
 	padding-top:10px;
 	padding-bottom:10px;
 	background-color: #ffb303;
