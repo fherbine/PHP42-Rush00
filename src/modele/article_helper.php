@@ -40,7 +40,7 @@ function article_decode($article)
 function article_exits($articles, $title)
 {
   if (array_key_exists($title))
-    return $article($title)
+    return $article($title);
   return (FALSE);
 }
 
