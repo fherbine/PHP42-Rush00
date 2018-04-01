@@ -13,7 +13,7 @@ function add_article()
   if (@$_POST['submit'] === 'ADD')
   {
       $articles = get_articles($bdd_dir_path, $bdd_file_path);
-      if (article_exits($articles, @$_POST['title']) === FALSE
+      if (article_exits($articles, @$_POST['art_title']) === FALSE
       && @$_POST['art_title'] != NULL
       && @$_POST['art_categ'] != NULL
       && @$_POST['art_desc'] != NULL

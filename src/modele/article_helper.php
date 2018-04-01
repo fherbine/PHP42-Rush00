@@ -38,9 +38,9 @@ function article_decode($article)
   return $article;
 }
 
-function article_exits($accounts, $title)
+function article_exits($articles, $title)
 {
-    foreach ($accounts as $key => $value)
+    foreach ($articles as $key => $value)
     {
       if ($title === $key)
         return $value;
@@ -57,4 +57,16 @@ function create_article($articles, $key, $article, $file_path)
   file_put_contents($file_path, $articles);
 }
 
+function delete_article($articles, $article_title, $file_path)
+{
+  foreach ($articles as $key => $value) {
+    if ($key === $article_title)
+    {
+        unset($articles[$key]);
+        break ;
+    }
+  }
+  $articles = serialize($articles);
+  file_put_contents($file_path, $articles);
+}
 ?>

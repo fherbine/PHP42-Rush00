@@ -1,6 +1,7 @@
 <?php
 	include_once ('../src/const.php');
 	include_once ('../src/modele/categorie_helper.php');
+  include_once ('../src/modele/article_helper.php')
 ?>
 
 <article>
@@ -56,18 +57,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>article1</td>
-                    <td>This is a tst</td>
-                    <td>35€</td>
-                    <td><a href="#">X</a></td>
-                </tr>
-                <tr>
-                    <td>article2</td>
-                    <td>This is a tst</td>
-                    <td>35€</td>
-                    <td><a href="#">X</a></td>
-                </tr>
+                <?php include ('display_article_admin.phtml'); ?>
             </tbody>
         </table>
     </div>

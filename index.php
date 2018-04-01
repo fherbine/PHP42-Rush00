@@ -70,16 +70,7 @@
 					<?php include ('views/categories.phtml');?>
 				</article>
 				<hr />
-				<?php
-					$bdd_dir_path = ROOT . DS . 'bdd';
-					$bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
-					$articles = get_articles($bdd_dir_path, $bdd_file_path);
-					foreach ($articles as $article)
-					{
-						$article = article_decode($article);
-						include ('views/display_article.phtml');
-					}
-				?>
+						<?php include ('views/display_article.phtml'); ?>
 			</section>
 			<footer>
 				<p>© 2018 - pprikazs & fherbine</p>
