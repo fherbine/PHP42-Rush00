@@ -1,6 +1,5 @@
 <html>
 <?php
-	session_start();
 	require_once ('src/modele/article_helper.php');
 	require_once ('src/modele/categorie_helper.php');
 	require_once ('src/const.php');

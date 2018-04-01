@@ -1,23 +1,34 @@
 <?php
 
+include ('const.php');
+include ('modele/render.php');
+include ('modele/article_helper.php');
+include ('modele/cookie_helper.php');
+
 function add_to_cart()
 {
   $cooki_name;
 
-  $cookie_name = "card";
-  if (@$_GET['submit'] === "ADD TO CART")
+  $cookie_name = 'card';
+  if (get_article_by_name(BDD_PATH, BDD_ARTICLE, @$_GET['art_title']) !== FALSE)
   {
-    if (get_article_by_name(BDD_PATH, BDD_ARTICLE, @$_GET['art_title'] !== FALSE)
-    {
-        if (!isset($_COOKIE["card"]))
-          create_cooki($cookie_name, @$_GET['art_title']);
-        else
-          add_item_to_cookie($cookie_name, @$_GET['art_title']);
-        add_user_in_cookie($cookie_name, @$_SESSION["logged_on_user"]);
-    }
+      if (!isset($_COOKIE[$cookie_name]))
+      {
+        $cookie_content = add_item_in_cookie(NULL, @$_GET['art_title']);
+        $cookie_content = add_user_in_cookie($cookie_content, @$_SESSION["logged_on_user"]);
+        create_cookie($cookie_name, $cookie_content);
+      }
+      else
+      {
+        $cookie_content = $_COOKIE[$cookie_name];
+        $cookie_content = add_item_in_cookie($cookie_content, @$_GET['art_title']);
+        $cookie_content = add_user_in_cookie($cookie_content, @$_SESSION["logged_on_user"]);
+        create_cookie($cookie_name, $cookie_content);
+      }
+      redirect('../index.php', 302);
   }
-  else redirect('../views/account.phtml', 302);
+  else redirect('../views/index.phtml', 302);
 }
 
-
+add_to_cart();
 ?>

@@ -28,7 +28,6 @@ function article_encode($article)
   return $article;
 }
 
-
 function article_decode($article)
 {
   foreach ($article as $key => $value) {
@@ -39,15 +38,15 @@ function article_decode($article)
 
 function article_exits($articles, $title)
 {
-  if (array_key_exists($title))
-    return $article($title);
+  if (array_key_exists($title, $articles))
+    return $articles[$title];
   return (FALSE);
 }
 
-function get_article_by_name($dir_path, $file_path, $name)
+function get_article_by_name($dir_path, $file_path, $title)
 {
   $articles = get_articles($dir_path, $file_path);
-  return article_exits($articles, $article);
+  return article_exits($articles, $title);
 }
 
 function create_article($articles, $key, $article, $file_path)
