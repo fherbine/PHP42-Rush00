@@ -20,7 +20,6 @@ function get_articles($dir_path, $file_path)
   return ($articles);
 }
 
-
 function article_encode($article)
 {
   foreach ($article as $key => $value) {
@@ -40,14 +39,16 @@ function article_decode($article)
 
 function article_exits($articles, $title)
 {
-    foreach ($articles as $key => $value)
-    {
-      if ($title === $key)
-        return $value;
-    }
-    return (FALSE);
+  if (array_key_exists($title))
+    return $article($title)
+  return (FALSE);
 }
 
+function get_article_by_name($dir_path, $file_path, $name)
+{
+  $articles = get_articles($dir_path, $file_path);
+  return article_exits($articles, $article);
+}
 
 function create_article($articles, $key, $article, $file_path)
 {

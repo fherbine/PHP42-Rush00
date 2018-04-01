@@ -8,11 +8,9 @@ function auth($login, $passwd)
 {
     $accounts;
     $account;
-    $bdd_dir_path = ROOT . DS . 'bdd';
-    $bdd_file_path = $bdd_dir_path .DS . 'passwd';
 
-    $accounts = get_accounts($bdd_dir_path, $bdd_file_path);
-    if (($account = account_exits($accounts, $passwd, $bdd_file_path)) !== FALSE)
+    $accounts = get_accounts(BDD_PATH, BDD_PASSWD);
+    if (($account = account_exits($accounts, $passwd, BDD_PASSWD)) !== FALSE)
     {
         if (check_passwd($account, $passwd) === TRUE)
           return ($account);

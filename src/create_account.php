@@ -7,12 +7,10 @@ include_once ('modele/user_helper.php');
 function  add_account()
 {
     $accounts;
-    $bdd_dir_path = ROOT . DS . 'bdd';
-    $bdd_file_path = ROOT . DS . 'bdd' . DS . 'passwd';
 
     if (@$_POST['submit'] === 'OK')
     {
-        $accounts = get_accounts($bdd_dir_path, $bdd_file_path);
+        $accounts = get_accounts(BDD_PATH, BDD_PASSWD);
         if (account_exits($accounts, @$_POST['login']) === FALSE
         && @$_POST['login'] != NULL
         && @$_POST['passwd'] != NULL
@@ -22,7 +20,7 @@ function  add_account()
             $values['passwd'] = hash('whirlpool', @$_POST['passwd']);
             $values['realname'] = @$_POST['name'];
             $values['admin'] = FALSE;
-            create_account($accounts, $values['login'], $values, $bdd_file_path);
+            create_account($accounts, $values['login'], $values, BDD_PASSWD);
             redirect('../views/success.html', 301);
         }
 		      else redirect('../views/auth_failure.html');
