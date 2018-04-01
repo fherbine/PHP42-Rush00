@@ -26,8 +26,7 @@ function add_article()
           $article['art_img'] = @$_POST['art_img'];
           $article['art_cost'] = @$_POST['art_cost'];
           create_article($articles, $article['art_title'], $article, $bdd_file_path);
-          echo "ok";
-          redirect('../views/account.phtml', 301);
+          redirect('../views/account.phtml', 302);
       }
       else redirect('../views/account.phtml', 302);
   }

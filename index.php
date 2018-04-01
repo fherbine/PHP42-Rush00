@@ -2,6 +2,7 @@
 <?php
 	session_start();
 	require_once ('src/modele/article_helper.php');
+	require_once ('src/modele/categorie_helper.php');
 	require_once ('src/const.php');
 ?>
 <head>
@@ -66,7 +67,7 @@
 			<section>
 				<article id="sort_art">
 					<p>Sort by categories : </p>
-					<?php include('views/categories.phtml');?>
+					<?php include ('views/categories.phtml');?>
 				</article>
 				<hr />
 				<?php
