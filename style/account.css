@@ -25,7 +25,7 @@
 }
 #add_item div
 {
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 	width: 33%;
 	text-align: center;
 }
@@ -35,6 +35,14 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+}
+#chk_block
+{
+	width: 100%;
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 #add_item div:nth-child(3)
 {
