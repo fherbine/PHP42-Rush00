@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once ('const.php');
 include_once ('modele/render.php');
 include_once ('modele/user_helper.php');
@@ -8,7 +9,7 @@ function  add_account()
 {
     $accounts;
 
-    if (@$_POST['submit'] === 'OK')
+    if (@$_POST['submit'] === 'OK' || @$_POST['submit'] === 'ADD')
     {
         $accounts = get_accounts(BDD_PATH, BDD_PASSWD);
         if (account_exits($accounts, @$_POST['login']) === FALSE
@@ -19,23 +20,29 @@ function  add_account()
             $values['login'] = @$_POST['login'];
             $values['passwd'] = hash('whirlpool', @$_POST['passwd']);
             $values['realname'] = @$_POST['name'];
-            $values['admin'] = FALSE;
+            if (@$_POST['admin'] != NULL)
+              $values['admin'] = TRUE;
+            else
+              $values['admin'] = FALSE;
             create_account($accounts, $values['login'], $values, BDD_PASSWD);
             if (@$_SESSION["logged_on_admin"] === TRUE)
               redirect('../views/account.phtml', 302);
-            redirect('../views/success.html', 301);
+            else
+              redirect('../views/success.html', 301);
         }
 		    else
         {
           if (@$_SESSION["logged_on_admin"] === TRUE)
             redirect('../views/account.phtml', 302);
-          redirect('../views/auth_failure.html');
+          else
+            redirect('../views/auth_failure.html');
         }
     }
     else{
       if (@$_SESSION["logged_on_admin"] === TRUE)
         redirect('../views/account.phtml', 302);
-      redirect('../index.php', 302);
+      else
+        redirect('../index.php', 302);
     }
 }
 
