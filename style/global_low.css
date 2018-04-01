@@ -2,44 +2,31 @@ body
 {
 	font-family: Verdana, Arial, sans-serif;
 	margin:0;
-	background-color: #f6f6f6;
+	background-color: white;
+	font-size: 12px;
 }
 header
 {
 	position: relative;
-	margin:auto;
 	background-color: #ffb303;
-	/*height:150px;*/
 	border-bottom: 1px solid orange;
-	/*width: 90%;*/
 	width:100%;
 	display: flex;
-	flex-direction: raw;
+	flex-direction: column-reverse;
 	justify-content: space-between;
-	align-items: center;
 	box-shadow: 0px 1px 1px black;
 }
 #left_header
 {
-	font-family: Fantasy, Arial, sans-serif;
-	padding-left: 7%;
-	font-size: 1.5vw;
-	margin:0;
-}
-h1
-{
-	/*color:white;*/
-	margin:0;
-	text-shadow: -2px -2px #ffc266;
+	display: none;
 }
 #right_header
 {
-	width: 20%;
-	/*border: 1px solid green;*/
+	width: 100%;
+	margin:auto;
 }
 #right_header ul
 {
-	/*border:1px solid red;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -47,17 +34,14 @@ h1
 }
 #main_page
 {
-	background-color: white;
-	/*border: 1px solid black;*/
-	box-shadow: 1px 1px 3px black, -1px 1px 3px black;
+	box-shadow: none;
 	margin:auto;
-	width:60%;
+	width:100%;
 	padding: 15px;
 }
 .main_menu
 {
-	width:30%;
-	/*border: 1px dotted red;*/
+	width:100%;
 }
 .main_menu ul
 {
@@ -73,7 +57,7 @@ h1
 .main_menu div
 {
 	/*border: 1px solid grey;*/
-	width: 30%;
+	width: 100%;
 	text-align: center;
 }
 .main_menu a
