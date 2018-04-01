@@ -60,9 +60,23 @@
 		</header>
 		<div id="main_page">
 			<section>
-				<?php
-					include_once ('cart_user.phtml');
-				?>
+				<table>
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Description</th>
+							<th>Price</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+							include_once ('cart_user.phtml');
+						?>
+					</tbody>
+				</table>
+				<a href="#">CHECKOUT</a>
+
 			</section>
 			<footer>
 				<hr />
