@@ -1,21 +1,4 @@
-#sign_out_div
-{
-	margin: auto;
-	background-color: orange;
-	width: 40%;
-	text-align: center;
-	padding: 10px;
-	text-decoration: none;
-	color: white;
-	/*border: 1px outset #ffb303;*/
-	font-size: 14px;
-}
-#sign_out_div:hover
-{
-	background-color: #ff9900;
-	text-shadow: -1px -1px 2px #ffb303;
-	border: 1px inset #ffb303;
-}
+
 #add_item
 {
 	/*border: 1px solid black;*/

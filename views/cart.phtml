@@ -25,13 +25,11 @@
 			<div id="right_header">
 				<ul>
 					<?php if (@$_SESSION['logged_on_user'] != null):?>
-					<div id="sign_out_li">
-						<li>
-							<a href="../src/logout.php" id="sign_out_div">
-								SIGN OUT
-							</a>
-						</li>
-					</div>
+					<ul>
+						<a href="../src/logout.php" id="sign_out_div">
+							<li>SIGN OUT</li>
+						</a>
+					</ul>
 					<?php else:?>
 					<div id="sign_in_div">
 						<li>SIGN IN</li>
