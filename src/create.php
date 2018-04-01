@@ -1,7 +1,6 @@
 <?php
 
 include_once ('const.php');
-include_once ('errors.php');
 include_once ('modele/render.php');
 include_once ('modele/user_helper.php');
 

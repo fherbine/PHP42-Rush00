@@ -59,13 +59,7 @@ function create_article($articles, $key, $article, $file_path)
 
 function delete_article($articles, $article_title, $file_path)
 {
-  foreach ($articles as $key => $value) {
-    if ($key === $article_title)
-    {
-        unset($articles[$key]);
-        break ;
-    }
-  }
+  unset($articles[$article_title]);
   $articles = serialize($articles);
   file_put_contents($file_path, $articles);
 }

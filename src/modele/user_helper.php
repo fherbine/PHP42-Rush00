@@ -22,10 +22,9 @@ function get_accounts($dir_path, $file_path)
 
 function account_exits($accounts, $login)
 {
-    foreach ($accounts as $key => $value)
+    if (array_key_exists($login, $accounts))
     {
-      if ($login === $key)
-        return $value;
+      return $accounts[$login];
     }
     return (FALSE);
 }
@@ -42,6 +41,13 @@ function check_passwd($account, $passwd)
     if (hash('whirlpool', $passwd) === $account['passwd'])
         return (TRUE);
     return (FALSE);
+}
+
+function delete_account($accounts, $login, $file_path)
+{
+  unset($accounts[$login]);
+  $accounts = serialize($accounts);
+  file_put_contents($file_path, $accounts);
 }
 
 ?>

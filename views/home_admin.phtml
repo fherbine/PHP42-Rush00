@@ -1,7 +1,8 @@
 <?php
 	include_once ('../src/const.php');
 	include_once ('../src/modele/categorie_helper.php');
-  include_once ('../src/modele/article_helper.php')
+  include_once ('../src/modele/article_helper.php');
+	include_once ('../src/modele/user_helper.php');
 ?>
 
 <article>
@@ -85,18 +86,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>toto_expl</td>
-                    <td>toto</td>
-                    <td>Yes</td>
-                    <td><a href="#">X</a></td>
-                </tr>
-                <tr>
-                    <td>tutu_tst</td>
-                    <td>tutu</td>
-                    <td>No</td>
-                    <td><a href="#">X</a></td>
-                </tr>
+                <?php include ('display_user_admin.phtml'); ?>
             </tbody>
         </table>
     </div>

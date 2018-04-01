@@ -1,0 +1,17 @@
+<?php
+	$bdd_dir_path = ROOT . DS . 'bdd';
+	$bdd_file_path = ROOT . DS . 'bdd' . DS . 'passwd';
+	$users = get_accounts($bdd_dir_path, $bdd_file_path);
+	foreach ($users as $user) :
+?>
+<tr>
+    <td><?= $user['login']; ?></td>
+    <td><?= $user['realname']; ?></td>
+    <?php if ($user['admin'] === TRUE) : ?>
+        <td>Yes</td>
+    <?php else : ?>
+        <td>No</td>
+    <?php endif; ?>
+    <td><a href="../src/remove_user.php?login=<?= $user['login'] ?>">X</a></td>
+</tr>
+<?php endforeach; ?>
