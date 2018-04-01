@@ -14,9 +14,6 @@ function remove_to_cart()
       $cookie_name = @$_SESSION["logged_on_user"];
     else
       $cookie_name = 'card';
-//    var_dump($_COOKIE);
-//    var_dump($_COOKIE[$cookie_name]);
-//    exit;
     if (get_article_by_name(BDD_PATH, BDD_ARTICLE, @$_GET['art_title']) !== FALSE)
     {
       $cookie_content = get_cookie_content($_COOKIE[$cookie_name]);

@@ -10,7 +10,6 @@ function  update_cookie()
 {
   if(isset($_COOKIE['card']))
   {
-    var_dump($_COOKIE['card']);
     $cookie_content1 = get_cookie_content($_COOKIE['card']);
     if (isset($_COOKIE[$_SESSION["logged_on_user"]]))
     {
