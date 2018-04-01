@@ -7,12 +7,10 @@ include_once ("modele/article_helper.php");
 function add_article()
 {
   $articles;
-  $bdd_dir_path = ROOT . DS . 'bdd';
-  $bdd_file_path = ROOT . DS . 'bdd' . DS . 'article';
 
   if (@$_POST['submit'] === 'ADD')
   {
-      $articles = get_articles($bdd_dir_path, $bdd_file_path);
+      $articles = get_articles(BDD_PATH, BDD_ARTICLE);
       if (article_exits($articles, @$_POST['art_title']) === FALSE
       && @$_POST['art_title'] != NULL
       && @$_POST['art_categ'] != NULL
@@ -25,7 +23,7 @@ function add_article()
           $article['art_desc'] = @$_POST['art_desc'];
           $article['art_img'] = @$_POST['art_img'];
           $article['art_cost'] = @$_POST['art_cost'];
-          create_article($articles, $article['art_title'], $article, $bdd_file_path);
+          create_article($articles, $article['art_title'], $article, BDD_ARTICLE);
           redirect('../views/account.phtml', 302);
       }
       else redirect('../views/account.phtml', 302);
