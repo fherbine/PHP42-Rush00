@@ -22,7 +22,7 @@ Table Commandes :
   "Une entre par commande, il peux y avoir plusieur fois la meme valeur"
 [
   0 => [
-    "user_name1" => [
+    "art_title" =>
         art_content,
         art_content,
         art_content,
@@ -37,7 +37,7 @@ Table Commandes :
   ],
   2 => [
     "user_name1" => [
-        art_content,
+        art_title,
         art_content,
         art_content,
     ]

@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include ('const.php');
 include ('modele/render.php');
 include ('modele/article_helper.php');
@@ -9,7 +10,10 @@ function add_to_cart()
 {
   $cooki_name;
 
-  $cookie_name = 'card';
+  if (@$_SESSION["logged_on_user"] != NULL)
+    $cookie_name = @$_SESSION["logged_on_user"];
+  else
+    $cookie_name = 'card';
   if (get_article_by_name(BDD_PATH, BDD_ARTICLE, @$_GET['art_title']) !== FALSE)
   {
       if (!isset($_COOKIE[$cookie_name]))

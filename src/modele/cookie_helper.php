@@ -5,6 +5,12 @@ function create_cookie($cookie_name, $cookie_value)
     setcookie($cookie_name, $cookie_value, time() + 3600 * 24, "/");
 }
 
+function destroy_cookie($cookie_name)
+{
+    setcookie($cookie_name, NULL, -1, "/");
+}
+
+
 function add_item_in_cookie($cookie_value, $item)
 {
     if ($cookie_value != NULL)
@@ -21,6 +27,13 @@ function add_item_in_cookie($cookie_value, $item)
     return serialize($cookie_value);
 }
 
+function get_cookie_user($cookie_value)
+{
+  if ($cookie_value['login'] != NULL)
+    return $cookie_value['login'];
+  return FALSE;
+}
+
 function add_user_in_cookie($cookie_value, $login)
 {
   $cookie_value = unserialize($cookie_value);
@@ -35,6 +48,32 @@ function set_cookie_content($cookie_content)
 
 function get_cookie_content($cookie_content)
 {
+  echo "coucou";
+    var_dump($cookie_content);
+    echo "coucou";
     return unserialize($cookie_content);
 }
+
+function merge_cookie($cookie_content1, $cookie_content2)
+{
+    if (isset($cookie_content1['item']))
+    {
+      if (isset($cookie_content2['item']))
+      {
+        foreach ($cookie_content1['item'] as $key => $value)
+        {
+            if (array_key_exists($key, $cookie_content2['item']))
+                $cookie_content1['item'][$key] += $cookie_content2['item'][$key];
+            else
+                $cookie_content1['item'][$key] = $cookie_content2['item'][$key];
+        }
+      }
+      return $cookie_content1;
+    }
+    else if (isset($cookie_content2['item']))
+        return $cookie_content1;
+    else
+      return "";
+}
+
 ?>

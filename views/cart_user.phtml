@@ -1,20 +1,29 @@
-<?php if (isset($_COOKIE['card'])) : ?>
-	<?php
+<?php
+if (@$_SESSION["logged_on_user"] != NULL)
+	$cookie_name = @$_SESSION["logged_on_user"];
+else
+	$cookie_name = 'card';
+if (isset($_COOKIE[$cookie_name])) : ?>
+		<?php
 				$articles = get_articles(BDD_PATH, BDD_ARTICLE);
-				$cookie_content = get_cookie_content($_COOKIE['card']);
-				foreach ($articles as $art_title => $article) :
-						$article = article_decode($article);
-						if (array_key_exists($art_title, $cookie_content['item'])) :
-							?>
-							<tr>
-								<td><?= $art_title; ?></td>
-								<td><?= $article['art_desc'];?></td>
-								<td><?= $article['art_cost'] ?></td>
-								<td><?= $cookie_content['item'][$art_title]; ?></td>
-								<td><a href="../src/remove_to_cart.php?art_title=<?= $art_title;?>">X</a></td>
-							</tr>
+				if (isset($_COOKIE[$cookie_name])) :
+						$cookie_content = get_cookie_content($_COOKIE[$cookie_name]);
+						if (isset($cookie_content['item'])) :
+						foreach ($articles as $art_title => $article) :
+								$article = article_decode($article);
+								if (array_key_exists($art_title, $cookie_content['item'])) :
+									?>
+									<tr>
+										<td><?= $art_title; ?></td>
+										<td><?= $article['art_desc'];?></td>
+										<td><?= $article['art_cost'] ?></td>
+										<td><?= $cookie_content['item'][$art_title]; ?></td>
+										<td><a href="../src/remove_to_cart.php?art_title=<?= $art_title;?>">X</a></td>
+									</tr>
+								<?php endif; ?>
+						<?php endforeach; ?>
 						<?php endif; ?>
-				<?php endforeach; ?>
+				<?php endif; ?>
 <?php else : ?>
 
 <?php endif; ?>

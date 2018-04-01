@@ -3,6 +3,24 @@
 include_once ('const.php');
 include_once ('modele/render.php');
 include_once ('modele/user_helper.php');
+include_once ('modele/cookie_helper.php');
+
+
+function  update_cookie()
+{
+  if(isset($_COOKIE['card']))
+  {
+    var_dump($_COOKIE['card']);
+    $cookie_content1 = get_cookie_content($_COOKIE['card']);
+    if (isset($_COOKIE[$_SESSION["logged_on_user"]]))
+    {
+        $cookie_content2 = get_cookie_content($_COOKIE[$_SESSION["logged_on_user"]]);
+        $cookie_content1 = merge_cookie($cookie_content1, $cookie_content2);
+    }
+    create_cookie($_SESSION["logged_on_user"], set_cookie_content($cookie_content1));
+    destroy_cookie('card');
+  }
+}
 
 function auth($login, $passwd)
 {
@@ -29,6 +47,7 @@ function check_login()
         {
           $_SESSION["logged_on_user"] = $account['login'];
           $_SESSION["logged_on_admin"] = $account['admin'];
+          update_cookie();
           return (TRUE);
         }
     }
