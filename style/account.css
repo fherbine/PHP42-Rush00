@@ -40,9 +40,9 @@
 {
 	width: 100%;
 	border: 1px solid black;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+	/*justify-content: space-between;*/
 }
 #add_item div:nth-child(3)
 {
