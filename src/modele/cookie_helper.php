@@ -2,7 +2,7 @@
 
 function create_cookie($cookie_name, $cookie_value)
 {
-    setcookie($cookie_name, $cookie_value, time() + 3600);
+    setcookie($cookie_name, $cookie_value, time() + 3600 * 24, "/");
 }
 
 function add_item_in_cookie($cookie_value, $item)
