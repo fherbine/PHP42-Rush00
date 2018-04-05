@@ -15,7 +15,7 @@ $accounts = get_accounts(BDD_PATH, BDD_PASSWD);
 
 $values['login'] = 'admin';
 $values['realname'] = 'admin';
-$values['passwd'] = 'admin';
+$values['passwd'] = hash('whirlpool', 'admin');
 $values['admin'] = TRUE;
 
 create_account($accounts, $values['login'], $values, BDD_PASSWD);
