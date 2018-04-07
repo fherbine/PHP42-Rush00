@@ -3,3 +3,7 @@
 
 A team project, made with @CallMarl during the piscine !
 We have to build an e-shop Website.
+
+======================================== OVERVIEW =======================================
+
+![screen shot 2018-04-07 at 20 36 51](https://user-images.githubusercontent.com/32856358/38458935-cc90169c-3aa3-11e8-8e67-8934299d314b.png)
